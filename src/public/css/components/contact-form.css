@@ -155,3 +155,6 @@ label.contact-form__group-title {
 .contact-form__error {
   color: red;
 }
+.contact-form__group-content--tel .contact-form__error {
+  grid-column: 1/6;
+}

@@ -70,14 +70,14 @@
       <div class="contact-form__group">
         <label for="tel01" class="contact-form__group-title">電話番号&nbsp;<span class="contact-form__required">※</span></label>
         <div class="contact-form__group-content contact-form__group-content--tel">
-          <input type="text" name="tel01" id="tel01" placeholder="080" value="{{ old('tel01') }}">
+          <input type="text" name="tel01" id="tel01" placeholder="080" value="{{ old('tel01') }}" maxlength="4">
           <span>-</span>
-          <input type="text" name="tel02" id="tel02" placeholder="1234" value="{{ old('tel02') }}">
+          <input type="text" name="tel02" id="tel02" placeholder="1234" value="{{ old('tel02') }}" maxlength="4">
           <span>-</span>
-          <input type="text" name="tel03" id="tel03" placeholder="5678" value="{{ old('tel03') }}">
+          <input type="text" name="tel03" id="tel03" placeholder="5678" value="{{ old('tel03') }}" maxlength="4">
           <div class="contact-form__error">
             @if ($errors->has('tel01') || $errors->has('tel02') || $errors->has('tel03'))
-            {{ $message }}
+            {{ $errors->first('tel01') ?: ($errors->first('tel02') ?: $errors->first('tel03')) }}
             @endif
           </div>
         </div>
@@ -123,7 +123,7 @@
       <div class="contact-form__group">
         <label for="detail" class="contact-form__group-title">お問い合わせ内容&nbsp;<span class="contact-form__required">※</span></label>
         <div class="contact-form__group-content">
-          <textarea name="detail" id="detail" placeholder="お問い合わせ内容をご記載ください" value="{{ old('detail') }}"></textarea>
+          <textarea name="detail" id="detail" placeholder="お問い合わせ内容をご記載ください">{{ old('detail') }}</textarea>
           <div class="contact-form__error">
             @error('detail')
             {{ $message }}

@@ -9,7 +9,10 @@
 .confirm-table__title {
   background-color: #BAA899;
   color: #fff;
+  display: grid;
+  align-items: center;
   padding: 20px 60px;
+  height: 100%;
 }
 
 .confirm-table__content {

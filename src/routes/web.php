@@ -15,10 +15,10 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [ContactController::class, 'index']);
-Route::post('/confirm', [ContactController::class, 'confirm']);
-Route::post('/thanks', [ContactController::class, 'store']);
-Route::get('/thanks', [ContactController::class, 'thanks']);
+Route::get('/', [ContactController::class, 'index'])->name('index');
+Route::post('/confirm', [ContactController::class, 'confirm'])->name('confirm');
+Route::post('/thanks', [ContactController::class, 'store'])->name('store');
+Route::get('/thanks', [ContactController::class, 'thanks'])->name('thanks');
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AuthController::class, 'admin']);
