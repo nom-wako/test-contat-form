@@ -21,5 +21,5 @@ Route::post('/thanks', [ContactController::class, 'store'])->name('store');
 Route::get('/thanks', [ContactController::class, 'thanks'])->name('thanks');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/admin', [AuthController::class, 'admin']);
+    Route::get('/admin', [AuthController::class, 'admin'])->name('admin');
 });

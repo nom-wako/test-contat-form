@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
 
-use App\Http\Requests\LoginRequest;
+use App\Http\Requests\LoginRequest as CustomLoginRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -20,9 +20,10 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        // FortifyのLoginRequestを自作のフォームリクエストに差し替え
         $this->app->bind(
             \Laravel\Fortify\Http\Requests\LoginRequest::class,
-            \App\Http\Requests\LoginRequest::class
+            CustomLoginRequest::class
         );
     }
 
@@ -44,8 +45,8 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         // ログインフォームリクエストのオーバーライド
-        Fortify::authenticateUsing(function (Request $request) {
-            $validated = app(LoginRequest::class)->validated();
+        Fortify::authenticateUsing(function (CustomLoginRequest $request) {
+            $validated = $request->validated();
             $user = User::where('email', $validated['email'])->first();
             if ($user && Hash::check($validated['password'], $user->password)) {
                 return $user;
