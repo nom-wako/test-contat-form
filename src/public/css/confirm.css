@@ -1,0 +1,25 @@
+.confirm-table {
+  border: 1px solid #E0DFDE;
+  color: #8B7969;
+  display: grid;
+  grid-template-columns: 32% 1fr;
+  font-size: 20px;
+}
+
+.confirm-table__title {
+  background-color: #BAA899;
+  color: #fff;
+  display: grid;
+  align-items: center;
+  padding: 20px 60px;
+  height: 100%;
+}
+
+.confirm-table__content {
+  padding: 20px 45px;
+}
+
+.confirm-table__title:not(:first-of-type),
+.confirm-table__content:not(:first-of-type) {
+  border-top: 1px solid #E0DFDE;
+}
