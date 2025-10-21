@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 
 /*
@@ -21,5 +21,7 @@ Route::post('/thanks', [ContactController::class, 'store'])->name('store');
 Route::get('/thanks', [ContactController::class, 'thanks'])->name('thanks');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/admin', [AuthController::class, 'admin']);
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+    Route::post('/delete', [AdminController::class, 'remove'])->name('remove');
+    Route::get('/export', [AdminController::class, 'exportCsv'])->name('export');
 });
