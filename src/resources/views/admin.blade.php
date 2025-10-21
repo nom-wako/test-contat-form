@@ -31,7 +31,7 @@
     <div class="admin-list">
       <div class="admin-list__header">
         <div class="admin-export">
-          <a href="" class="admin-export__button">エクスポート</a>
+          <a href="{{ route('export', request()->query()) }}" class="admin-export__button">エクスポート</a>
         </div>
         @if ($contacts->hasPages())
         <div class="admin-paginate">
