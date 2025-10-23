@@ -25,7 +25,7 @@
 
 ## ER 図
 
-[ER Image](er_test-contact-form.png)
+![ER Image](er_test-contact-form.png)
 
 ## URL
 
