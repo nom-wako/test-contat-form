@@ -8,6 +8,14 @@ textarea {
   padding: 10px 32px;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    padding-inline: 16px;
+  }
+}
 
 textarea {
   padding-block: 16px;
@@ -74,9 +82,19 @@ select {
   display: grid;
   grid-template-columns: auto 64%;
 }
+@media screen and (max-width: 768px) {
+  .contact-form__group {
+    grid-template-columns: 1fr;
+  }
+}
 
 .contact-form__group + .contact-form__group {
   margin-top: 32px;
+}
+@media screen and (max-width: 768px) {
+  .contact-form__group + .contact-form__group {
+    margin-top: 26px;
+  }
 }
 
 .contact-form__group-title {
@@ -86,6 +104,12 @@ select {
 label.contact-form__group-title {
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .contact-form__group-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
 
 .contact-form__required {
   color: #FF9494;
@@ -94,6 +118,11 @@ label.contact-form__group-title {
 .contact-form__group-content {
   display: grid;
   gap: 0 45px;
+}
+@media screen and (max-width: 768px) {
+  .contact-form__group-content {
+    column-gap: 24px;
+  }
 }
 
 .contact-form__group-content--name {
@@ -114,6 +143,13 @@ label.contact-form__group-title {
   gap: 52px;
   font-size: 18px;
   padding-inline: 15px;
+}
+@media screen and (max-width: 768px) {
+  .contact-form__radio {
+    gap: 40px;
+    font-size: 15px;
+    padding-inline: 0;
+  }
 }
 
 .contact-form__button {
@@ -139,6 +175,13 @@ label.contact-form__group-title {
 .contact-form__button-submit:hover {
   background-color: #BEB1A6;
 }
+@media screen and (max-width: 768px) {
+  .contact-form__button-submit {
+    font-size: 16px;
+    width: 128px;
+    height: 37px;
+  }
+}
 
 .contact-form__button-back {
   color: inherit;
@@ -147,6 +190,11 @@ label.contact-form__group-title {
 }
 .contact-form__button-back:hover {
   text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .contact-form__button-back {
+    font-size: 16px;
+  }
 }
 
 .contact-form__error {
