@@ -29,7 +29,6 @@ input:focus {
 }
 
 .auth-form__group label {
-  color: #8B7969;
   cursor: pointer;
   font-size: 25px;
 }

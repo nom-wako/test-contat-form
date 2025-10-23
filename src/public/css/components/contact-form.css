@@ -80,7 +80,6 @@ select {
 }
 
 .contact-form__group-title {
-  color: #8B7969;
   font-size: 20px;
   margin-top: 3px;
 }
@@ -102,7 +101,6 @@ label.contact-form__group-title {
 }
 
 .contact-form__group-content--tel {
-  color: #8B7969;
   grid-template-columns: 1fr auto 1fr auto 1fr;
   align-items: center;
   column-gap: 15px;
@@ -112,7 +110,6 @@ label.contact-form__group-title {
 }
 
 .contact-form__radio {
-  color: #8B7969;
   display: flex;
   gap: 52px;
   font-size: 18px;
@@ -144,7 +141,7 @@ label.contact-form__group-title {
 }
 
 .contact-form__button-back {
-  color: #8B7969;
+  color: inherit;
   font-size: 20px;
   text-decoration: underline;
 }

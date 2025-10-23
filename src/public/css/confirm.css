@@ -1,6 +1,5 @@
 .confirm-table {
   border: 1px solid #E0DFDE;
-  color: #8B7969;
   display: grid;
   grid-template-columns: 32% 1fr;
   font-size: 20px;
