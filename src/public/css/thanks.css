@@ -11,14 +11,18 @@
 }
 
 .thanks__heading {
-  color: #8B7969;
   font-size: 30px;
   font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .thanks__heading {
+    font-size: 24px;
+  }
 }
 
 .thanks__bg {
   color: rgba(139, 121, 105, 0.05);
-  font-size: 280px;
+  font-size: 130px;
   margin: auto;
   position: absolute;
   inset: 0 0 50px 50vw;
@@ -27,6 +31,11 @@
   width: fit-content;
   height: fit-content;
   z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .thanks__bg {
+    font-size: 224px;
+  }
 }
 
 .thanks__home {
@@ -46,4 +55,11 @@
 }
 .thanks__home-link:hover {
   background-color: #BEB1A6;
+}
+@media screen and (max-width: 768px) {
+  .thanks__home-link {
+    font-size: 16px;
+    width: 112px;
+    height: 37px;
+  }
 }

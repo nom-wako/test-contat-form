@@ -1,3 +1,6 @@
+input {
+  width: 100%;
+}
 input:focus {
   outline: 1px solid #82756A;
 }
@@ -25,13 +28,18 @@ input:focus {
   display: grid;
   gap: 14px;
   margin-inline: auto;
-  width: 445px;
+  width: 100%;
+  max-width: 445px;
 }
 
 .auth-form__group label {
-  color: #8B7969;
   cursor: pointer;
   font-size: 25px;
+}
+@media screen and (max-width: 768px) {
+  .auth-form__group label {
+    font-size: 20px;
+  }
 }
 
 .auth-form__group input {
@@ -49,13 +57,27 @@ input:focus {
 .auth-form__group + .auth-form__group {
   margin-top: 45px;
 }
+@media screen and (max-width: 768px) {
+  .auth-form__group + .auth-form__group {
+    margin-top: 36px;
+  }
+}
 
 .auth-form--login .auth-form__button {
   margin-top: 95px;
 }
-
+@media screen and (max-width: 768px) {
+  .auth-form--login .auth-form__button {
+    margin-top: 76px;
+  }
+}
 .auth-form--register .auth-form__button {
   margin-top: 63px;
+}
+@media screen and (max-width: 768px) {
+  .auth-form--register .auth-form__button {
+    margin-top: 51px;
+  }
 }
 
 .auth-form__button {
@@ -74,6 +96,13 @@ input:focus {
 }
 .auth-form__button-submit:hover {
   background-color: #BEB1A6;
+}
+@media screen and (max-width: 768px) {
+  .auth-form__button-submit {
+    font-size: 16px;
+    width: 96px;
+    height: 37px;
+  }
 }
 
 .auth-form__error {

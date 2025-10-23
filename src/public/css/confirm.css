@@ -1,9 +1,14 @@
 .confirm-table {
   border: 1px solid #E0DFDE;
-  color: #8B7969;
   display: grid;
-  grid-template-columns: 32% 1fr;
+  grid-template-columns: 312px 1fr;
   font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .confirm-table {
+    grid-template-columns: 1fr;
+    font-size: 16px;
+  }
 }
 
 .confirm-table__title {
@@ -17,6 +22,12 @@
 
 .confirm-table__content {
   padding: 20px 45px;
+}
+@media screen and (max-width: 768px) {
+  .confirm-table__title,
+  .confirm-table__content {
+    padding: 16px 36px;
+  }
 }
 
 .confirm-table__title:not(:first-of-type),
